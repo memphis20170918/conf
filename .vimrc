@@ -31,6 +31,8 @@ function! InitWin()
 
     if has('win32')
         set guifont=Terminus:h11:cANSI
+        " Disabling IME input
+        set iminsert=0
     endif
 endfunction
                                                                                    

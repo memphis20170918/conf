@@ -28,14 +28,19 @@ function! InitWin()
                                                                                    
     " Line numbers
     set number
+
+    if has('win32')
+        set guifont=Terminus:h11:cANSI
+        set iminsert=0
+    endif
 endfunction
                                                                                    
-function! InitSearch()                                                             
+function! InitSearch()
     set nowrapscan
 endfunction
 
 call InitSyntax()
 call InitCursor()
-call InitTabs() 
-call InitWin()                                                                  
+call InitTabs()
+call InitWin()
 call InitSearch()
